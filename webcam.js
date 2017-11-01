@@ -416,18 +416,18 @@ var Webcam = {
 			input.style.display = 'none';
 			elem.appendChild(input);
 			// make div clickable for open camera interface
-			div.addEventListener('click', function(event) {
-				if (params.user_callback) {
-					// global user_callback defined - create the snapshot
-					self.snap(params.user_callback, params.user_canvas);
-				} else {
-					// no global callback definied for snapshot, load image and wait for external snap method call
-					input.style.display = 'block';
-					input.focus();
-					input.click();
-					input.style.display = 'none';
-				}
-			}, false);
+			// div.addEventListener('click', function(event) {
+			// 	if (params.user_callback) {
+			// 		// global user_callback defined - create the snapshot
+			// 		self.snap(params.user_callback, params.user_canvas);
+			// 	} else {
+			// 		// no global callback definied for snapshot, load image and wait for external snap method call
+			// 		input.style.display = 'block';
+			// 		input.focus();
+			// 		input.click();
+			// 		input.style.display = 'none';
+			// 	}
+			// }, false);
 			elem.appendChild(div);
 			this.loaded = true;
 			this.live = true;
